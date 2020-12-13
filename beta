@@ -1,0 +1,142 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+ 
+int tam = 3;
+int quant = 0;
+
+struct estoquec
+{
+char produto;
+float preco;
+int estoque;
+};
+
+void busca(char prod[quant].produto);
+int menu();
+void cadastro(char prod[quant].produto);
+void exclusao(char prod[quant].produto);
+
+void main()
+{
+int op;
+estoquec prod[tam];
+
+do {
+op = menu();
+
+if (op == 1)
+cadastro(prod[quant].produto);
+else
+if (op == 2)
+busca(prod[quant].produto);
+else
+if (op == 3)
+exclusao(prod[quant].produto);
+else
+if (op == 4)
+cout << "Voce saiu do programa!";
+else
+cout << "Opcao invalida, tente novamente!";
+
+}while (op != 4);
+
+}
+
+void cadastro(char prod[quant].produto);
+{
+int i;
+
+if
+{
+if (quant == tam)
+cout << "Nao tem espaco para cadastrar!";
+}
+else
+if
+{
+cout << "Digite o nome do produto: ";
+gets_s(prod[quant].produto);
+
+for (i=0; i<quant; i++)
+{
+if (prod[i].produto == prod[quant].produto)
+cout << "Produto ja cadastrado!"
+}
+}
+else
+{
+cout << "Digite o preco do produto: ";
+cin >> prod[quant].preco;
+cout << "Digite a quantidade que tem em estoque: ";
+cin >> prod[quant].estoque;
+
+quant ++;
+
+cout << "Cadastro feito com sucesso!";
+}
+
+void busca(char prod[quant].produto)
+{
+int i, j;
+
+if
+{
+if (quant == 0)
+cout << "Nao tem nenhum produto cadastrado!";
+}
+else
+{
+cout << "Digite o nome do produto: ";
+gets_s(prod[j].produto);
+
+for (i=0; i<quant; i++)
+{
+if (prod[i].produto == prod[j].produto)
+cout << "Nome: " << prod[i].produto;
+cout << "Preco: " << prod[i].preco;
+cout << "Quantidade em estoque: " << prod[i].preco;
+}
+}
+
+void exclusao(char prod[quant].produto)
+{
+int i, j, k;
+
+if
+{
+if (quant == 0)
+cout << "Nao tem nenhum produto cadastrado!";
+}
+else
+{
+cout << "Digite o nome do produto: ";
+gets_s(prod[j].produto);
+
+for (i=0; i<quant; i++)
+{
+if (prod[i].produto == prod[j].produto)
+break;
+}
+
+for (k=i+1; k<quant; k++, i++)
+prod[i]= prod[j];
+
+quant --;
+
+cout << "Exclusao feita com sucesso!";
+}
+
+int menu()
+{
+int op;
+cout << "\n MENU \n";
+cout << "1 - CADASTRAR \n";
+cout << "2 - BUSCAR \n";
+cout << "3 - EXCLUIR \n";
+cout << "4 - SAIR \n\n";
+cout << "Digite a opcao: ";
+cin >> op;
+return op;
+} 
